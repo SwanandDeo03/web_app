@@ -3,19 +3,17 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo "Preparing static files from web_app"
+      - echo "Preparing static files from root directory"
       - echo "Current directory:"
       - pwd
       - echo "Directory contents:"
       - ls -la
-      - echo "Checking if web_app exists:"
-      - ls -la web_app/ || echo "web_app directory not found!"
 
   build:
     commands:
       - echo "No build step required"
 
 artifacts:
-  base-directory: web_app
+  base-directory: .
   files:
     - '**/*'
